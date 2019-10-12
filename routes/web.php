@@ -7,3 +7,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/members', 'MemberController@index')->name('members');
+
+Route::get('/families', 'FamilyController@index')->name('families');
