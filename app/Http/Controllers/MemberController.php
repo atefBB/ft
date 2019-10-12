@@ -23,6 +23,12 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return view('member');
+        $members = \App\Person::all();
+
+        return view(
+            'member', array(
+                "members" => $members
+            )
+        );
     }
 }
