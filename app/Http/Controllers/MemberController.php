@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Person;
 
 class MemberController extends Controller
 {
@@ -23,7 +24,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = \App\Person::all();
+        $members = Person::all();
 
         return view(
             'member', array(
