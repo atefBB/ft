@@ -46,8 +46,8 @@
                                         <td>{{ $member->birth_date }}</td>
                                         <td>
                                             <div aria-label="Options buttons" class="btn-group" role="group">
-                                                <button class="btn btn-success" type="button" data-toggle="tooltip" data-placement="top" title="{{ __("Edit") }}"><i class="far fa-edit"></i></button>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-times"></i></button>
+                                                <button class="btn btn-success" type="button" v-b-tooltip title="{{ __('Edit') }}"><i class="far fa-edit"></i></button>
+                                                <button class="btn btn-danger" type="button" v-b-tooltip title="{{__('Delete') }}"><i class="fas fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
