@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     {{ __('Members') }}
+                    <b-button href="#" variant="outline-primary" size="sm"><i class="fas fa-plus"></i>&nbsp;{{ __("Add member") }}</b-button>
                 </div>
                 <div class="card-body">
                     @if (session('status'))
