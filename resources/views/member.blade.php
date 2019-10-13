@@ -7,7 +7,39 @@
             <div class="card">
                 <div class="card-header">
                     {{ __('Members') }}
-                    <b-button href="#" variant="outline-primary" size="sm"><i class="fas fa-plus"></i>&nbsp;{{ __("Add member") }}</b-button>
+                    <b-button href="#" v-b-modal.add_member-modal variant="outline-primary" size="sm"><i class="fas fa-plus"></i>&nbsp;{{ __("Add member") }}</b-button>
+                    <b-modal id="add_member-modal" title="{{ __('Add member') }}" centered size="lg">
+                         <b-container fluid>
+                            <b-row class="mb-1">
+                              <b-col cols="3">{{ __("Firstname") }}</b-col>
+                              <b-col>
+                                <b-form-input id="firstname" placeholder="Enter your firstname" type="text"></b-form-input>
+                              </b-col>
+                            </b-row>
+                            <b-row class="mb-1">
+                              <b-col cols="3">{{ __("Lastname") }}</b-col>
+                              <b-col>
+                                <b-form-input id="lastname" placeholder="Enter your lastname" type="text"></b-form-input>
+                              </b-col>
+                            </b-row>
+                            <b-row class="mb-1">
+                              <b-col cols="3">{{ __("Birth Date") }}</b-col>
+                              <b-col>
+                                <b-form-input id="birth_date" placeholder="Enter your birth date" type="date"></b-form-input>
+                              </b-col>
+                            </b-row>
+                            <b-row class="mb-1">
+                                <b-col cols="3">{{ __("Gender") }}</b-col>
+                                <b-col>
+                                    <b-form-group>
+                                      <b-form-radio model="selected" name="gender" value="male">{{ __("Male") }}</b-form-radio>
+                                      <b-form-radio model="selected" name="gender" value="female">{{ __("Female") }}</b-form-radio>
+                                    </b-form-group>
+                                </b-col>
+                            </b-row>
+                        </b-container>
+                    </b-modal>
+
                 </div>
                 <div class="card-body">
                     @if (session('status'))
