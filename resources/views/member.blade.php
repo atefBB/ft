@@ -39,7 +39,6 @@
                             </b-row>
                         </b-container>
                     </b-modal>
-
                 </div>
                 <div class="card-body">
                     @if (session('status'))
