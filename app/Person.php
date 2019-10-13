@@ -12,7 +12,7 @@ class Person extends Model
 
     public function family()
     {
-        return $this->belongsTo('Family');
+        return $this->belongsTo('App\Family');
     }
 
 }
