@@ -8,7 +8,7 @@
                 <div class="card-header">
                     {{ __('Members') }}
                     <b-button href="#" v-b-modal.add_member-modal variant="outline-primary" size="sm"><i class="fas fa-plus"></i>&nbsp;{{ __("Add member") }}</b-button>
-                   <add-member-modal-component></add-member-modal-component>
+                   <add-member-modal-component :model_title="'{{ __('Add member') }}'" :firstname="'{{ __('Firstname') }}'" :firstname_placeholder="'{{ __('Enter your firstname') }}'" :lastname="'{{ __('Lastname') }}'" :lastname_placeholder="'{{ __('Enter your lastname') }}'" :birth_date="'{{ __('Birth Date') }}'" :gender="'{{ __('Gender') }}'" :male="'{{ __('Male') }}'" :female="'{{ __('Female') }}'"></add-member-modal-component>
                 </div>
                 <div class="card-body">
                     @if (session('status'))
