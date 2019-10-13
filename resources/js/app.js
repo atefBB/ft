@@ -26,6 +26,10 @@ Vue.use(BootstrapVue);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component(
+    'add-member-modal-component',
+    require('./components/AddMemberModalComponent.vue').default
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
