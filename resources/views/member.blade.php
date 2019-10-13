@@ -45,7 +45,7 @@
                                         <td>{{ $member->lastname }}</td>
                                         <td>{{ $member->birth_date }}</td>
                                         <td>
-                                            <b-modal id="f-modal-{{ $member->id }}" title="Family of {{ $member->firstname . " " . $member->lastname }}">
+                                            <b-modal id="f-modal-{{ $member->id }}" title="Family of {{ $member->firstname . " " . $member->lastname }}" centered size="lg">
                                                 <p class="my-4">Hello from modal!</p>
                                             </b-modal>
                                             <div aria-label="Options buttons" class="btn-group" role="group">
