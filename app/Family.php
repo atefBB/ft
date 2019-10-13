@@ -12,7 +12,7 @@ class Family extends Model
 
     public function members()
     {
-        return $this->hasMany('Person');
+        return $this->hasMany('App\Person');
     }
 
 }
