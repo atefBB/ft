@@ -24,7 +24,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = Person::paginate(10);
+        $members = Person::orderBy("birth_date")->paginate(10);
 
         return view(
             'member', array(
