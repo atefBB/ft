@@ -24,7 +24,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = Person::all();
+        $members = Person::paginate(10);
 
         return view(
             'member', array(
