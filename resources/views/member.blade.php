@@ -20,9 +20,6 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        #
-                                    </th>
-                                    <th>
                                         {{ __("First Name") }}
                                     </th>
                                     <th>
@@ -39,15 +36,12 @@
                             <tbody>
                                 @foreach($members as $member)
                                     <tr>
-                                        <th scope="row">
-                                            {{ $member->id }}
-                                        </th>
                                         <td>{{ $member->firstname }}</td>
                                         <td>{{ $member->lastname }}</td>
                                         <td>{{ $member->birth_date }}</td>
                                         <td>
                                             <b-modal id="f-modal-{{ $member->id }}" title="Family of {{ $member->firstname . " " . $member->lastname }}" centered size="lg">
-                                                <p class="my-4">Hello from modal!</p>
+                                                <p class="my-4">{{ $member->family }}</p>
                                             </b-modal>
                                             <div aria-label="Options buttons" class="btn-group" role="group">
                                                 <button class="btn btn-info" type="button" v-b-tooltip title="{{ __('See Family') }}" v-b-modal.f-modal-{{ $member->id }}><i class="far fa-eye"></i></button>
