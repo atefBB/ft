@@ -4,27 +4,27 @@
             <b-row class="mb-1">
               <b-col cols="3">{{ firstname }}</b-col>
               <b-col>
-                <b-form-input id="firstname" :placeholder="firstname_placeholder" type="text"></b-form-input>
+                <b-form-input id="firstname" :placeholder="firstname_placeholder" type="text" v-model="member.firstname"></b-form-input>
               </b-col>
             </b-row>
             <b-row class="mb-1">
               <b-col cols="3">{{ lastname }}</b-col>
               <b-col>
-                <b-form-input id="lastname" :placeholder="lastname_placeholder" type="text"></b-form-input>
+                <b-form-input id="lastname" :placeholder="lastname_placeholder" type="text" v-model="member.lastname"></b-form-input>
               </b-col>
             </b-row>
             <b-row class="mb-1">
               <b-col cols="3">{{ birth_date }}</b-col>
               <b-col>
-                <b-form-input id="birth_date" type="date"></b-form-input>
+                <b-form-input id="birth_date" v-model="member.birth_date" type="date"></b-form-input>
               </b-col>
             </b-row>
             <b-row class="mb-1">
                 <b-col cols="3">{{ gender }}</b-col>
                 <b-col>
                     <b-form-group>
-                      <b-form-radio model="selected" name="gender" value="male">{{ male }}</b-form-radio>
-                      <b-form-radio model="selected" name="gender" value="female">{{ female }}</b-form-radio>
+                      <b-form-radio v-model="member.gender" model="selected" name="gender" value="male">{{ male }}</b-form-radio>
+                      <b-form-radio v-model="member.gender" model="selected" name="gender" value="female">{{ female }}</b-form-radio>
                     </b-form-group>
                 </b-col>
             </b-row>
@@ -38,6 +38,11 @@
 
 <script>
     export default {
+        data () {
+            return {
+                member: {}
+            }
+        },
         props: {
             model_title: String,
             firstname: String,
@@ -49,12 +54,9 @@
             male: String,
             female: String
         },
-        mounted() {
-            console.log('Component mounted.')
-        },
         methods: {
-            addMember: () => {
-                console.log("Adding member");
+            addMember () {
+                console.log(this.member);
             }
         }
     }
