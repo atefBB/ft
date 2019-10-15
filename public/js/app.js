@@ -1877,6 +1877,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      member: {}
+    };
+  },
   props: {
     model_title: String,
     firstname: String,
@@ -1888,12 +1893,9 @@ __webpack_require__.r(__webpack_exports__);
     male: String,
     female: String
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
   methods: {
     addMember: function addMember() {
-      console.log("Adding member");
+      console.log(this.member);
     }
   }
 });
@@ -66788,6 +66790,13 @@ var render = function() {
                       id: "firstname",
                       placeholder: _vm.firstname_placeholder,
                       type: "text"
+                    },
+                    model: {
+                      value: _vm.member.firstname,
+                      callback: function($$v) {
+                        _vm.$set(_vm.member, "firstname", $$v)
+                      },
+                      expression: "member.firstname"
                     }
                   })
                 ],
@@ -66813,6 +66822,13 @@ var render = function() {
                       id: "lastname",
                       placeholder: _vm.lastname_placeholder,
                       type: "text"
+                    },
+                    model: {
+                      value: _vm.member.lastname,
+                      callback: function($$v) {
+                        _vm.$set(_vm.member, "lastname", $$v)
+                      },
+                      expression: "member.lastname"
                     }
                   })
                 ],
@@ -66834,7 +66850,14 @@ var render = function() {
                 "b-col",
                 [
                   _c("b-form-input", {
-                    attrs: { id: "birth_date", type: "date" }
+                    attrs: { id: "birth_date", type: "date" },
+                    model: {
+                      value: _vm.member.birth_date,
+                      callback: function($$v) {
+                        _vm.$set(_vm.member, "birth_date", $$v)
+                      },
+                      expression: "member.birth_date"
+                    }
                   })
                 ],
                 1
@@ -66864,6 +66887,13 @@ var render = function() {
                             model: "selected",
                             name: "gender",
                             value: "male"
+                          },
+                          model: {
+                            value: _vm.member.gender,
+                            callback: function($$v) {
+                              _vm.$set(_vm.member, "gender", $$v)
+                            },
+                            expression: "member.gender"
                           }
                         },
                         [_vm._v(_vm._s(_vm.male))]
@@ -66876,6 +66906,13 @@ var render = function() {
                             model: "selected",
                             name: "gender",
                             value: "female"
+                          },
+                          model: {
+                            value: _vm.member.gender,
+                            callback: function($$v) {
+                              _vm.$set(_vm.member, "gender", $$v)
+                            },
+                            expression: "member.gender"
                           }
                         },
                         [_vm._v(_vm._s(_vm.female))]
