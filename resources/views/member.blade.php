@@ -21,10 +21,10 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        {{ __("First Name") }}
+                                        {{ __("Firstname") }}
                                     </th>
                                     <th>
-                                        {{ __("Last Name") }}
+                                        {{ __("Lastname") }}
                                     </th>
                                     <th>
                                         {{ __("Birth Date") }}
