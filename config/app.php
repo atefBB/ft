@@ -94,7 +94,25 @@ return [
     */
 
     'fallback_locale' => 'en',
-
+    /*
+    |--------------------------------------------------------------------------
+    | Supported Application Locales
+    |--------------------------------------------------------------------------
+    |
+    | Our supported locales will have available frontend and model
+    | translations.
+    |
+    */
+    'supported_locales' => [
+        'en' => [
+            'name' => 'English',
+            'dir'  => 'ltr',
+        ],
+        'ar' => [
+            'name' => 'العربية',
+            'dir'  => 'rtl'
+        ],
+    ],
     /*
     |--------------------------------------------------------------------------
     | Faker Locale
