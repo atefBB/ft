@@ -1,0 +1,18 @@
+{
+    "Members": "اﻷعضاء",
+    "Add member": "اضافة عضو",
+    "Login": "تسجيل الدخول",
+    "Logout": "خروج",
+    "Firstname": "الاسم",
+    "Lastname": "اللقب",
+    "Birth Date": "تاريخ الولادة",
+    "Gender": "الجنس",
+    "Male": "ذكر",
+    "Female": "أنثى",
+    "Options": "خيارات",
+    "Enter your firstname": "قم بتعمير الاسم",
+    "Enter your lasstname": "قم بتعمير اللقب",
+    "See Family": "رؤية العائلة",
+    "Edit": "تعديل",
+    "Delete": "فسخ"
+}
