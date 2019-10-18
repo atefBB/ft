@@ -51,8 +51,15 @@
                                         <td>{{ $member->lastname }}</td>
                                         <td>{{ $member->birth_date }}</td>
                                         <td>
-                                            <b-modal id="f-modal-{{ $member->id }}" title="Family of {{ $member->firstname . " " . $member->lastname }}" centered size="lg">
+                                            <b-modal id="f-modal-{{ $member->id }}"
+                                              title="{{ __('family_of', ['name' => $member->firstname . " " . $member->lastname ]) }}"
+                                              centered size="lg">
                                                 <p class="my-4">{{ $member->family }}</p>
+                                                <template v-slot:modal-footer="{ ok, cancel, hide }">
+                                                   <b-button variant="danger" @click="cancel()">
+                                                     {{ __('Cancel') }}
+                                                   </b-button>
+                                                 </template>
                                             </b-modal>
                                             <div aria-label="Options buttons" class="btn-group" role="group">
                                                 <button class="btn btn-info" type="button" v-b-tooltip title="{{ __('See Family') }}" v-b-modal.f-modal-{{ $member->id }}><i class="far fa-eye"></i></button>
