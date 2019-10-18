@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="@if(locale()->dir() == 'rtl') {{ asset('css/app-rtl.css') }} @else {{ asset('css/app-rtl.css') }} @endif" rel="stylesheet">
     <link href="{{ asset('css/all.min.css') }}" rel="stylesheet">
 </head>
 <body>
