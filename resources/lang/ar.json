@@ -1,5 +1,7 @@
 {
     "Members": "اﻷعضاء",
+    "Families": "العائلات",
+    "family_of": "عائلة :name",
     "Add member": "اضافة عضو",
     "Login": "تسجيل الدخول",
     "Logout": "خروج",
@@ -14,5 +16,6 @@
     "Enter your lastname": "قم بتعمير اللقب",
     "See Family": "رؤية العائلة",
     "Edit": "تعديل",
-    "Delete": "فسخ"
+    "Delete": "فسخ",
+    "Cancel": "إلغاء"
 }
