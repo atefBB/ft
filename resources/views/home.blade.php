@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __("Family Tree") }}</div>
+                <div class="card-header">{{ config("app.name") }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {{ __("Welcome") }}
                 </div>
             </div>
         </div>
