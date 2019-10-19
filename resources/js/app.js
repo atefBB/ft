@@ -30,6 +30,11 @@ Vue.component(
     require('./components/AddMemberModalComponent.vue').default
 );
 
+Vue.component(
+    'member-family-modal-component',
+    require('./components/MemberFamilyModalComponent.vue').default
+);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
