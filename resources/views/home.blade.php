@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ config("app.name") }}</div>
+                <div class="card-header @if(locale()->dir() == 'rtl') text-right @else text-right @endif">{{ config("app.name") }}</div>
 
-                <div class="card-body">
+                <div class="card-body @if(locale()->dir() == 'rtl') text-right @else text-right @endif">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
