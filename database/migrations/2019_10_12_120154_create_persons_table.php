@@ -8,7 +8,7 @@ class CreatePersonsTable extends Migration {
 	public function up()
 	{
 		Schema::create('persons', function(Blueprint $table) {
-			$table->increments('id');
+			$table->bigIncrements('id');
 			$table->timestamps();
 			$table->string('firstname');
 			$table->string('lastname');
