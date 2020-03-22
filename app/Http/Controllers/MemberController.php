@@ -32,4 +32,10 @@ class MemberController extends Controller
             )
         );
     }
+
+    public function store() 
+    {
+        $person = Person::create(request()->all());
+	return $person;
+    }
 }
